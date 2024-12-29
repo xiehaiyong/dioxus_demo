@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CroftSoft Dioxus Demo</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/assets/stylesheet.css">
+<link rel="preload" href="/./wasm/dioxus-demo_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+            <link rel="preload" href="/./wasm/dioxus-demo.js" as="script">
+            </head>
+  <body>
+    <div id="main"><script>window.hydrate_queue=[];window.dx_hydrate=(id,data)=>{const decoded=atob(data),bytes=Uint8Array.from(decoded,(c)=>c.charCodeAt(0));if(window.hydration_callback)window.hydration_callback(id,bytes);else window.hydrate_queue.push([id,bytes])};
+</script><nav data-node-hydration="0"><ul><li><a href="/" data-node-hydration="1,click:1"><!--node-id2-->Home<!--#--></a></li><li><a href="/colophon" aria-current="page" data-node-hydration="3,click:1"><!--node-id4-->Colophon<!--#--></a></li></ul></nav><h1 data-node-hydration="5">Colophon Page</h1><p data-node-hydration="6">This website was created using the Rust library <a href="https://dioxuslabs.com/" target="_blank">Dioxus</a>.</p><p data-node-hydration="7">This open source repository for this website is hosted on GitHub:<br/><a href="https://github.com/david-wallace-croft/dioxus-demo" target="_blank">https://github.com/david-wallace-croft/dioxus-demo</a></p><h1 data-node-hydration="8"><!--node-id9-->High-Five counter: 0<!--#--></h1><button data-node-hydration="10,click:1">Up high!</button><button data-node-hydration="11,click:1">Down low!</button><script>window.initial_dioxus_hydration_data="gYEY9g==";</script></div>
+  <script>
+            // We can't use a module script here because we need to start the script immediately when streaming
+            import("/./wasm/dioxus-demo.js").then(
+                ({ default: init }) => {
+                init("/./wasm/dioxus-demo_bg.wasm").then((wasm) => {
+                    if (wasm.__wbindgen_start == undefined) {
+                    wasm.main();
+                    }
+                });
+                }
+            );
+            </script>
+            
+            </body>
+</html>
